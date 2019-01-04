@@ -14,9 +14,9 @@ from openpyxl import load_workbook
 #       sheet['E1'] ='Details'
 #       sheet['F1'] ='ErrorID:'
 #    book.save(r'D:\test\test1.xlsx')  # 在字符串前加r，声明为raw字符串，这样就不会处理其中的转义了。否则，可能会报错
-book = load_workbook('d:\\test1.xlsx')# need to use \\ instead of \ 
+book = load_workbook('d:\\ANT\\ANT_V0.270_CTS&GTSfailedcases.xlsx')# need to use \\ instead of \ 
 browser = webdriver.Chrome()
-browser.get('file://10.75.10.81/Share/ANT/CTS/V0.250/CTS/results/2018.12.18_13.39.28/test_result_failures.html')
+browser.get('file://10.75.10.81/Share/ANT/CTS/V0.270/GTS-toNJ/results/2018.12.27_23.13.46/test_result_failures.html')
 testNames = browser.find_elements_by_class_name('testname')
 details = browser.find_elements_by_class_name('details')
 i = 2
@@ -28,8 +28,8 @@ for test in testNames:
 #   print(test.text)
 # print('==========================================below is details===========================')
 for detail in details:
-    sheet['E'+str(j)] = test.text
+    sheet['E'+str(j)] = detail.text
     j = j + 1
 #   print(detail.text)
 browser.quit()
-book.save('d:\\test1.xlsx')
+book.save('d:\\ANT\\ANT_V0.270_CTS&GTSfailedcases.xlsx')
