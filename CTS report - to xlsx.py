@@ -32,4 +32,4 @@ for detail in details:
     j = j + 1
 #   print(detail.text)
 browser.quit()
-book.save('d:\\ANT\\ANT_V0.270_CTS&GTSfailedcases.xlsx')
+book.save('d:\\test\\result\\GTSfailedcases.xlsx')

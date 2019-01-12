@@ -40,7 +40,7 @@ def getAttr(path,ele,attr):
    Ele = root.getElementsByTagName(ele)
    Attr = Ele[0].getAttribute(attr)
    return Attr
-rootPath = 'D:\\core2\\SKU2' #//10.75.10.81/Share/CO2P/Google_Submission/V3.110/SKU2
+rootPath = '//10.75.10.81/Share/Dynamo2/CTS/V0.520' #//10.75.10.81/Share/CO2P/Google_Submission/V3.110/SKU2
 dirs = os.listdir(rootPath)
 path = rootPath + '/' + dirs[0] + '/results'
 subDir = os.listdir(path)
@@ -73,10 +73,10 @@ for i in range(len(dirs)):
     modelTotal = getAttr(resultPath,'Summary','modules_total')
     print('modules Total =' + modelTotal)
     sheet['E'+str(i+2)] = modelDone + '/' + modelTotal
-    if failedCount == 0:
+    if failedCount == '0':
         comment = "pass"
     else:
-        comment = failedCount + 'items sorry do not know how to list out in an easy way'
+        comment = failedCount + 'items'
     sheet['F'+str(i+2)] = comment
     if dirs[i] in Commend:
         commend = Commend[dirs[i]]
