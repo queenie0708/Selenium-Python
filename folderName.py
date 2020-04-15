@@ -1,10 +1,10 @@
 import os
 import xml.dom.minidom
 import xml.sax
-path = '//10.75.10.81/Share/Dynamo2/CTS/V0.500/CTS/results'
+path = r'D:\test\BTS\KaiOS\advanced_stability'
 dirs = os.listdir(path)
 for dir in dirs:
-    print(dirs)
+    print(dir)
 #subPath = path +'/'+ dirs[0]
 #dom = xml.dom.minidom.parse(subPath + '/test_result.xml')
 #subDirs = os.listdir(subPath)

@@ -1,8 +1,8 @@
-## 引入WebDriver的包
+﻿## 引入WebDriver的包
 from selenium import webdriver
 
-## 创建浏览器对象
-browser = webdriver.Chrome()
+driver = webdriver.Chrome()
+driver.get("http://www.baidu.com")
 
-## 打开百度网站
-browser.get('https://www.baidu.com/')
+driver.find_element_by_id("kw").send_keys("selenium")
+driver.find_element_by_id("su").click()

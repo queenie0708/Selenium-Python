@@ -40,7 +40,7 @@ def getAttr(path,ele,attr):
    Ele = root.getElementsByTagName(ele)
    Attr = Ele[0].getAttribute(attr)
    return Attr
-rootPath = '//10.75.10.81/Share/Dynamo2/CTS/V0.520' #//10.75.10.81/Share/CO2P/Google_Submission/V3.110/SKU2
+rootPath = '//10.75.10.81/Share/FRT/CTS_report/V1.520/00WW' #//10.75.10.81/Share/CO2P/Google_Submission/V3.110/SKU2
 dirs = os.listdir(rootPath)
 path = rootPath + '/' + dirs[0] + '/results'
 subDir = os.listdir(path)
@@ -86,4 +86,4 @@ for i in range(len(dirs)):
         retry = Retry[dirs[i]]
         print('retry = '+ retry)
         sheet['E'+str(i+11)] = retry
-book.save(r'D:\xtsCo2pReport.xlsx')
+book.save(r'D:\xtsFRTpReport.xlsx')
